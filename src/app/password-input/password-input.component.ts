@@ -9,6 +9,7 @@ export class PasswordInputComponent implements OnInit {
 
   @Input() ngModel: string;
   isVisible = false;
+  password: string;
 
   constructor() { }
 

@@ -11,6 +11,9 @@ export class PasswordInputComponent implements OnInit {
 
   faEye = faEye;
   faEyeSlash = faEyeSlash;
+
+
+
   isVisible = false;
   internalPassword: string;
   @Input() get password() {

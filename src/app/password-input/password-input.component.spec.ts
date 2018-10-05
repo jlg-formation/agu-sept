@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PasswordInputComponent } from './password-input.component';
+import { FormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 describe('PasswordInputComponent', () => {
   let component: PasswordInputComponent;
@@ -8,6 +10,7 @@ describe('PasswordInputComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [FormsModule, FontAwesomeModule],
       declarations: [ PasswordInputComponent ]
     })
     .compileComponents();

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -9,7 +9,8 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 })
 export class PasswordInputComponent implements OnInit {
 
-  faCoffee = faCoffee;
+  faEye = faEye;
+  faEyeSlash = faEyeSlash;
   isVisible = false;
   internalPassword: string;
   @Input() get password() {

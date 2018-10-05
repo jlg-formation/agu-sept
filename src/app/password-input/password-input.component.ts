@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-password-input',
@@ -7,9 +7,21 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PasswordInputComponent implements OnInit {
 
-  @Input() ngModel: string;
+
   isVisible = false;
-  password: string;
+  internalPassword: string;
+  @Input() get password() {
+    return this.internalPassword;
+  }
+
+  set password(val) {
+    this.internalPassword = val;
+    this.passwordChange.emit(this.internalPassword);
+  }
+
+  @Output() passwordChange = new EventEmitter();
+
+
 
   constructor() { }
 

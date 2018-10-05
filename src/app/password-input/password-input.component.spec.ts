@@ -25,4 +25,27 @@ describe('PasswordInputComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should be by default in hidden state', () => {
+    expect(component.isVisible).toEqual(false);
+  });
+
+  it('should go to cleartext', () => {
+    component.toggle();
+    expect(component.isVisible).toEqual(true);
+  });
+
+  it('should go to hidden', () => {
+    component.isVisible = true;
+    component.toggle();
+    expect(component.isVisible).toEqual(false);
+  });
+
+  it('should go to hidden with hide method (#234)', () => {
+    component.isVisible = true;
+    component.hide();
+    expect(component.isVisible).toEqual(false);
+  });
+
+
 });

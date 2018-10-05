@@ -38,4 +38,8 @@ export class PasswordInputComponent implements OnInit {
     this.isVisible = !this.isVisible;
   }
 
+  hide() {
+    this.isVisible = false;
+  }
+
 }
